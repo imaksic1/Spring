@@ -37,12 +37,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.webjars.npm</groupId>
-			<artifactId>swagger-editor</artifactId>
-			<version>3.6.11</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>

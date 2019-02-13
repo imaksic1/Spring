@@ -1,9 +1,6 @@
 package com.Maxa.Uci.Web;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PlusControleler {
@@ -28,5 +25,22 @@ public class PlusControleler {
         k1.setIme(userDetails.getFirstName()+" "+userDetails.getAddress());
         k1.setPrezime(userDetails.getLastName());
         return k1;
+    }
+
+    @DeleteMapping("/delete/{userId}")
+    public String deleteUser(@PathVariable String userId)
+    {
+         return "DELETE nije implementiran";
+
+    }
+
+    @PutMapping("/unos1/{Id}")
+    public String updateUser(@PathVariable Integer Id) {
+        return "Uneli ste: " + Id;
+    }
+
+    @PutMapping("/unos/{userId}")
+    public String updateUser1(@PathVariable String userId, @RequestBody Korisnik kor) {
+        return kor.getPrezime() + " " + kor.getIme() + " " + userId;
     }
 }
